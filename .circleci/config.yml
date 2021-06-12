@@ -14,19 +14,19 @@ jobs:
   #     - checkout # check out the code in the project directory
   #     - run: echo "hello world" # run the `echo` command
 
-  build:
-    docker:
-      - image: circleci/android:api-25-alpha
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
-
-  # build-macos:
-  #   macos:
-  #     xcode: 11.3.0
+  # build:
+  #   docker:
+  #     - image: circleci/android:api-25-alpha
   #   steps:
   #     - checkout # check out the code in the project directory
   #     - run: echo "hello world" # run the `echo` command
+
+  build:
+    macos:
+      xcode: 11.3.0
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
 
   # build-win: # name of your job
   #   executor:
